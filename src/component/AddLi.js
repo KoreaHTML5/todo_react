@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import PropTypes from "prop-types";
 
 class AddLi extends Component {
     constructor() {
@@ -23,5 +24,9 @@ class AddLi extends Component {
         this.inputBox.focus();
     }
 }
+
+AddLi.propTypes = {
+    handleAddedData: PropTypes.func.isRequired
+};
 
 export default AddLi;

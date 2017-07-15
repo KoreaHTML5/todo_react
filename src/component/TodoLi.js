@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 
+import PropTypes from "prop-types";
+
 const TodoLi = ({handleRemovedData, todo}) => {
     const onClickRemoveButton = () => {
         handleRemovedData(todo);
@@ -15,6 +17,11 @@ const TodoLi = ({handleRemovedData, todo}) => {
             </span>
         </li>
     );
+};
+
+TodoLi.propTypes = {
+    handleRemovedData: React.PropTypes.func.isRequired,
+    todo: React.PropTypes.string.isRequired
 };
 
 export default TodoLi;
